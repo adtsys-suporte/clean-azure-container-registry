@@ -1,5 +1,5 @@
 FROM microsoft/azure-cli
-RUN apk add --no-cache docker jq
 
 ADD clean.sh /
 ENTRYPOINT [ "/clean.sh" ]
+RUN apk add --no-cache docker jq && chmod +x /clean.sh
